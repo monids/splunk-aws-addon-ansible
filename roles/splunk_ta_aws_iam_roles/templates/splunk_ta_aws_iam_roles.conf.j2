@@ -1,0 +1,5 @@
+{% for item in accounts %}
+[{{ item.accountid }}]
+arn = arn:aws:iam::{{item.accountid}}:role/Splunk_Role
+
+{% endfor %}

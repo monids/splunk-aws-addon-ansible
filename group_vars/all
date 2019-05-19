@@ -1,0 +1,8 @@
+---
+accounts:
+  - accountid: 321321321321
+    accountname: zebras-prod
+  - accountid: 654654654654
+    accountname: zebras-acc
+  - accountid: 987987987987
+    accountname: zebras-test

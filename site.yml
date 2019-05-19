@@ -1,0 +1,18 @@
+---
+  - name: Generate configuration files for the Splunk AWS Add-on
+    hosts: localhost
+
+    roles:
+      - splunk_ta_aws_iam_roles
+      - aws_description
+      - cloudwatch
+
+  - name: Assembling configurations
+    hosts: localhost
+
+    tasks:
+      - name: Assembling inputs.conf
+        assemble:
+          src: output/tmp
+          dest: output/inputs.conf
+          remote_src: true

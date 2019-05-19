@@ -1,0 +1,7 @@
+---
+  - name: Generate cloudwatch configuration file
+    template:
+      src: cloudwatch.conf.j2
+      dest: output/tmp/cloudwatch.conf
+      remote_src: true
+    with_items: "{{ accounts }}"

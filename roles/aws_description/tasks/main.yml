@@ -1,0 +1,7 @@
+---
+  - name: Generate aws metadata file (aws_description_tasks.yml)
+    template:
+      src: aws_description_tasks.conf.j2
+      dest: output/aws_description_tasks.conf
+      remote_src: true
+    with_items: "{{ accounts }}"

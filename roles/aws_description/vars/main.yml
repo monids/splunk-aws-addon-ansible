@@ -1,0 +1,4 @@
+---
+account: Splunk_EC2_Role
+regions: eu-central-1
+# if you are using multilple regions enter them comma separated in regions field

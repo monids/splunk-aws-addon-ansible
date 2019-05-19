@@ -1,0 +1,351 @@
+{% for item in accounts %}
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"ServiceName":[".*"],"Currency":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/Billing
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"AvailabilityZone":[".*"],"LoadBalancer":[".*"],"TargetGroup":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApplicationELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"VolumeId":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/EBS
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"Resource":[".*"],"Stage":[".*"],"Method":[".*"],"ApiName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApiGateway
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"AvailabilityZone":[".*"],"LoadBalancer":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApplicationELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"LoadBalancer":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApplicationELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"AvailabilityZone":[".*"],"LoadBalancerName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"InstanceId":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/EC2
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"DBInstanceIdentifier":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/RDS
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"FunctionName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/Lambda
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"InstanceType":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/EC2
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"AutoScalingGroupName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/EC2
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"FunctionName":[".*"],"Resource":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/Lambda
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"DatabaseClass":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/RDS
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"EngineName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/RDS
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"BucketName":[".*"],"FilterId":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/S3
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"BucketName":[".*"],"StorageType":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/S3
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"ApiName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApiGateway
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"LoadBalancerName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"DBClusterIdentifier":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/RDS
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"Stage":[".*"],"ApiName":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ApiGateway
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"Currency":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/Billing
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"LinkedAccount":[".*"],"ServiceName":[".*"],"Currency":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/Billing
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"AvailabilityZone":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/ELB
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+
+[aws_cloudwatch://{{ item.accountid }}-{{ item.accountname }}_cloudwatch_{{ 9999999999999999999999 | random | to_uuid }}_]
+aws_account = {{ account }}
+aws_iam_role = {{ item.accountid }}
+aws_region = {{ regions }}
+index = {{ item.accountid }}-{{ item.accountname }}
+metric_dimensions = [{"ImageId":[".*"]}]
+metric_names = ".*"
+metric_namespace = AWS/EC2
+period = 300
+polling_interval = 3600
+sourcetype = aws:cloudwatch
+statistics = ["Average","Sum","SampleCount","Maximum","Minimum"]
+use_metric_format = false
+{% endfor %}

@@ -1,0 +1,7 @@
+---
+  - name: Generate roles cofig file
+    template:
+      src: splunk_ta_aws_iam_roles.conf.j2
+      dest: output/splunk_ta_aws_iam_roles.conf
+      remote_src: true
+    with_items: "{{ accounts }}"
