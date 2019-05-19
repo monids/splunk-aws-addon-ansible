@@ -1,6 +1,6 @@
 ## Introduction
 This Ansible playbook generates configuration files for Splunk Add-on for AWS.
-The playbook uses three roles that generate configuration files on the same host, in folder output/
+The playbook uses individual roles for each input type. Roles generate configuration files on the same host, in folder output/
 
 |Role|Output File|Description|
 | ------------- | ------------- | ------------- |
