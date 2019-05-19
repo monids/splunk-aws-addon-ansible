@@ -3,6 +3,7 @@ This Ansible playbook generates configuration files for Splunk Add-on for AWS.
 The playbook uses three roles that generate configuration files on the same host, in folder output/
 
 |Role|Output File|Description|
+| ------------- | ------------- | ------------- |
 |splunk_ta_aws_iam_roles|splunk_ta_aws_iam_roles.conf|IAM Roles assumed in target AWS accounts|
 |aws_description|aws_description_tasks.conf|Metadata about AWS Resources in use|
 |inputs|inputs.conf|Configuration for collection of CloudWatch metrics|
